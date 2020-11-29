@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "477980180533",
+    "firebase_url": "https://deer-skrefi.firebaseio.com",
+    "project_id": "deer-skrefi",
+    "storage_bucket": "deer-skrefi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477980180533:android:d60b42409a820987",
+        "android_client_info": {
+          "package_name": "com.skrefi.deer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477980180533-cs72t6m4ifaej6hdojktjkmr0s84iqid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skrefi.deer",
+            "certificate_hash": "456410f33b2f5765ac3bf2b300a38e59e267f41d"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY4flWlfH7MzF0vXVDmWTadJMb2bazpwo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477980180533-c62846075ptss33ajjeejp65b9rk91ja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

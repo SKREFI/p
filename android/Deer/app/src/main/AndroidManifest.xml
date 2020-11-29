@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skrefi.deer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/deerdone"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/deerdone"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CommentUtils.OnPostActivity"></activity>
+        <activity android:name=".PostUtils.PostActivity" />
+        <activity android:name=".Account.RegisterActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Account.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

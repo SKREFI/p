@@ -30,7 +30,7 @@ int	main(int argc, char *argv[])
     if (ftruncate(shm_fd, shm_size) == -1) { perror("Something went wrong with mmmory allocation."); shm_unlink(shm_name); return errno; }
 
     int offset = 0;
-    for (int i = 0; i <= argc; i++) {
+    for (int i = 0; i < argc; i++) {
         char* shm_pointer = mmap(0, pageSize, PROT_READ|PROT_WRITE, MAP_SHARED, shm_fd, offset);
         //                                              EX2     AND HERE
         if (shm_pointer == MAP_FAILED) { perror("MAP FAILED");  shm_unlink(shm_name); return errno; }

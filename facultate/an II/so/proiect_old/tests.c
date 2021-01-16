@@ -5,8 +5,5 @@
 
 // forkls
 int main(int argc, char *argv[]) {
-    pid_t pid = fork();
-    pid_t pid2 = fork();
-
-    if (pid == 0) { printf("Parent\n"); } else { printf("Child\n"); }
+    printf("%c", 'z' + 3);
 }

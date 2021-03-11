@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/andreicalin/Desktop/algoritmi fundamentali/tema_seminar3/prob_cutii/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+queue
+-
+stack
+-
+

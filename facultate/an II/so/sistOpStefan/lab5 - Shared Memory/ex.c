@@ -1,11 +1,11 @@
-#include <sys/mman.h>
-#include <sys/stat.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+  #include <sys/mman.h>
+  #include <sys/stat.h>
+  #include <sys/wait.h>
+  #include <fcntl.h>
+  #include <errno.h>
+  #include <unistd.h>
+  #include <stdio.h>
+  #include <stdlib.h>
 
 // gcc ex.c -lrt
 // trebuie linking aparent?

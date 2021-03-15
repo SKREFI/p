@@ -13,7 +13,11 @@ y <- sample(0:1000, 1)
 
 # Chaos game
 for (i in 1:10000) {
+<<<<<<< HEAD
   Sys.sleep(.005)
+=======
+  Sys.sleep(.001)
+>>>>>>> 34fa06a7e982fa15bac1d4d0c615b9ac3e80f396
   n <- sample(1:3, 1)
   x <- floor(x + (p[n] - x) / 2)
   y <- floor(y + (q[n] - y) / 2)

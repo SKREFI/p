@@ -1,0 +1,68 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+ifstream f("sortaret.in");
+ofstream g("sortaret.out");
+
+const int nr_noduri = 50001;
+const int nr_muchii = 100001;
+vector<int> muchii_de_la[nr_noduri];
+int dmin[nr_noduri], n, m;
+queue<int> intern0;
+queue<int> rezultat;
+
+void citire() {
+    int a,b;
+    f>>n>>m;
+
+    for(int i=0; i<m; i++) {
+        f>>a>>b;
+        dmin[b]++;
+        muchii_de_la[a].push_back(b);
+    }
+}
+
+void sortare_topologica() {
+    int i;
+
+    for(i=1; i<=n; i++)
+        if(dmin[i] == 0)
+            intern0.push(i);
+
+
+    while (!intern0.empty()) {
+        i = intern0.front();
+        intern0.pop();
+
+        rezultat.push(i);
+
+        for(int j : muchii_de_la[i]) {
+            //cout<<
+            dmin[j]--;
+            if(dmin[j] == 0)
+                intern0.push(j);
+        }
+    }
+}
+
+void afisare() {
+    int a;
+    while (!rezultat.empty()) {
+        a = rezultat.front();
+        rezultat.pop();
+        //cout<<a<<" ";
+        g<<a<<" ";
+    }
+}
+
+int main() {
+    citire();
+
+    sortare_topologica();
+    afisare();
+    f.close();
+    g.close();
+}

@@ -4,6 +4,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <errno.h>
 
 int main(int argc, char *argv[]) {
     // File descriptor
@@ -34,7 +35,7 @@ int main(int argc, char *argv[]) {
     // getting the data from the fd1
     bytes_read = read(fd1, buf, nbytes);
     if (bytes_read < 0) { perror("Read error."); return errno; }
-    else printf("Bytes read from the file: %d\n", bytes_read);
+    else printf("Bytes read from the file: %ld\n", bytes_read);
     
     printf("I have got this from fd1: %s", buf);
 

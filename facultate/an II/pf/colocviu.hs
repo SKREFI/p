@@ -8,8 +8,8 @@ fib = 1 : 1 : [a + b | (a, b) <- zip fib (tail fib)]
 
 myFun1 (x, y) z (x1, y2) = ((x + x1) * z, z * (y + y2))
 
-whatAge 16 = "You can drive A2."
-whatAge 18 = "You can drive A1 and B."
+whatAge 16 = "You can drive A1."
+whatAge 18 = "You can drive A2 and B."
 whatAge otherwise = "Nothing special."
 
 double x = x * 2

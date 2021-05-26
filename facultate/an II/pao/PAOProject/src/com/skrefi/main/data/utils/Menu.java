@@ -8,15 +8,20 @@ public class Menu {
     private static Menu instance = null;
     private static Scanner scanner;
 
-    public int promptMenu() {
+    private Menu() {
+        scanner = new Scanner(System.in);
+    }
+    public static Menu getInstance() { return instance == null ? new Menu(): instance; }
+
+    public int show() {
         Helper.print("============== MENU ==============");
         Helper.print("=========== 0. Print All Students  ===========");
         Helper.print("=========== 1. Print All Teachers  ===========");
-        Helper.print("=========== 2. Print All Courses  ===========");
-        Helper.print("=========== 3. Add a new Student  ===========");
-        Helper.print("=========== 4. Add a new Teacher  ===========");
-        Helper.print("=========== 5. Add a new Course  ===========");
-        Helper.print("=========== 6. TODO  ===========");
+        Helper.print("=========== 2. Print All Courses   ===========");
+        Helper.print("=========== 3. Add a new Student   ===========");
+        Helper.print("=========== 4. Add a new Teacher   ===========");
+        Helper.print("=========== 5. Add a new Course    ===========");
+        Helper.print("=========== 6. TODO                ===========");
 
         int option = scanner.nextInt();
 
@@ -71,10 +76,4 @@ public class Menu {
 
     }
 
-
-
-    private Menu() {
-        scanner = new Scanner(System.in);
-    }
-    public static Menu getInstance() { return instance == null ? new Menu(): instance; }
 }

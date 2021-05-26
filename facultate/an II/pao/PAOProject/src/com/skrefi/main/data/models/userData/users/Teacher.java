@@ -5,6 +5,7 @@ import com.skrefi.main.data.utils.TeacherType;
 
 import java.util.Objects;
 
+
 public class Teacher extends Person {
     private Integer courseId;
     private TeacherType teacherType;

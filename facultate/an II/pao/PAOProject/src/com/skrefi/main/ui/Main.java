@@ -1,7 +1,7 @@
 package com.skrefi.main.ui;
 
 /*
-    Grupa: 241
+    Grupa:  241
     Author: Sandu Razvan-Alexandru
     Tema:   Catalog (student, materie, profesor)
 
@@ -20,8 +20,10 @@ import com.skrefi.main.data.utils.Helper;
 import com.skrefi.main.data.utils.Menu;
 import com.skrefi.main.repo.DatabaseRepository;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Teacher baetica = Helper.getOneTeacher();
         Student representant = Helper.getOneStudent();
         Grupa best = Helper.getOneGrupa(representant);
@@ -31,7 +33,7 @@ public class Main {
         Helper.print(Helper.getRandomGrade());
 
         Menu menu = Menu.getInstance();
-        menu.promptMenu();
+        menu.show();
     }
 
     private static <T> void print(T object) { Helper.print(object); }
